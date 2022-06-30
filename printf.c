@@ -18,7 +18,7 @@ int	ft_printchar(int c)
 	return (1);
 }
 
-int	ft_formats(va_list args, const char format)
+int	ft_toprint(va_list args, const char format)
 {
 	int	print_length;
 
@@ -53,11 +53,11 @@ int	ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			print_length += ft_formats(args, str[i + 1]);
+			print_length += ft_toprint(args, str[i + 1]);
 			i++;
 		}
 		else
-			print_length += ft_printchar(str[i]);
+			print_length += //ft_printchar(str[i]);
 		i++;
 	}
 	va_end(args);
