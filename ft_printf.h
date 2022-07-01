@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_printf.c                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/01 15:59:22 by marvin            #+#    #+#             */
-/*   Updated: 2022/07/01 15:59:22 by marvin           ###   ########.fr       */
+/*   Created: 2022/07/01 15:55:21 by marvin            #+#    #+#             */
+/*   Updated: 2022/07/01 15:55:21 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef	FT_PRINTF_H
+# define	FT_PRINTF_H
 
-int main(void)
-{
-	void *ptr;
-	int a;
-	char b[] = "hola";
-	
-	print_ptr(ptr);
-	printf("%p", ptr);
-	// this is how print_hex have to work, return in hexadecimal an array!
-}
+#include <stdio.h>
+
+void	ft_putnbr_base(int nbr, char *base);
+void    print_ptr(void *p);
+
+#endif
