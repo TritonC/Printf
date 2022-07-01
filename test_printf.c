@@ -17,7 +17,7 @@ int main()
 	void *ptr;
 	int a;
 	char b[] = "hola";
-	
+
 	print_ptr(ptr);
 	printf("\n %p", ptr);
 	return (0);
