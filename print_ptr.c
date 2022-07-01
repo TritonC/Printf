@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   print_ptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/01 15:55:21 by marvin            #+#    #+#             */
-/*   Updated: 2022/07/01 15:55:21 by marvin           ###   ########.fr       */
+/*   Created: 2022/07/01 16:14:57 by marvin            #+#    #+#             */
+/*   Updated: 2022/07/01 16:14:57 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef		FT_PRINTF_H
-# define	FT_PRINTF_H
+#include "ft_printf.h"
 
-#include <stdio.h>
+void    print_ptr(void *p)
+{
+	size_t ptr_value;
 
-void	ft_putnbr_base(int nbr, char *base);
-void    print_ptr(void *p);
-void    ft_putstr(char *str);
-void	ft_putchar(char c);
-
-#endif
+	ptr_value = (size_t) p;
+	write (1, "0x", 2);
+	ft_putnbr_base (ptr_value, "0123456789abcdef");
+}

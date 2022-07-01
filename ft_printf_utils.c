@@ -24,16 +24,7 @@ void    ft_putstr(char *str)
 	}
 }
 
-void    print_ptr(void *p)
-{
-	size_t ptr_value;
-
-	ptr_value = (size_t) p;
-	write (1, "0x", 2);
-	ft_putnbr_base (ptr_value, "0123456789abcdef");
-}
-
 void	print_hex(void *var)
 {
-	
+
 }

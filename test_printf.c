@@ -12,13 +12,14 @@
 
 #include "ft_printf.h"
 
-int main(void)
+int main()
 {
 	void *ptr;
 	int a;
 	char b[] = "hola";
 	
 	print_ptr(ptr);
-	printf("%p", ptr);
+	printf("\n %p", ptr);
+	return (0);
 	// this is how print_hex have to work, return in hexadecimal an array!
 }
