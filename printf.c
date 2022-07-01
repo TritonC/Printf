@@ -34,7 +34,7 @@ int	ft_toprint(va_list args, const char format)
 	else if (format == 's')
 		print_length += //put str(va_arg(args, char *));
 	else if (format == 'p')
-		print_length += //print_ptr(va_arg(args, unsigned long long));
+		print_ptr += //print_ptr(va_arg(args, unsigned long long));
 	else if (format == 'd' || format == 'i')
 		print_length += //printnbr(va_arg(args, int));
 	else if (format == 'u')

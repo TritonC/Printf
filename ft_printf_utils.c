@@ -85,3 +85,8 @@ size_t    print_ptr(void *p)
     write (1, "0x", 2);
     ft_putnbr_base (ptr_value, "0123456789abcdef");
 }
+
+void	print_hex(void *var)
+{
+	
+}
