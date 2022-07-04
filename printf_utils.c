@@ -25,19 +25,17 @@ int	ft_putstr(char *str)
 	return (count);
 }
 
-int	ft_ptr(void *p)
+int	ft_ptr(unsigned long long nb)
 {
-	unsigned long int	ptr_value;
-	int					count;
+	int						count;
 
 	count = 0;
-	ptr_value = (unsigned long int)p;
 	write (1, "0x", 2);
-	count = ft_putnbr_base(ptr_value, "0123456789abcdef");
+	count = ft_putnbr_base(nb, "0123456789abcdef");
 	return (count + 2);
 }
 
-int	ft_unsigned_numb(unsigned long int nb)
+int	ft_unsigned_numb(unsigned int nb)
 {
 	int	nb_len;
 

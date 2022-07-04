@@ -34,13 +34,13 @@ int	ft_toprint(va_list args, const char format)
 	else if (format == 's')
 		print_length += ft_putstr(va_arg(args, char *));
 	else if (format == 'p')
-		print_length += ft_ptr(va_arg(args, void *));
+		print_length += ft_ptr(va_arg(args, unsigned long long));
 	else if (format == 'd' || format == 'i')
 		print_length += ft_base_numb(va_arg(args, int), format);
 	else if (format == 'u')
 		print_length += ft_unsigned_numb(va_arg(args, unsigned int));
 	else if (format == 'x' || format == 'X')
-		print_length += ft_base_numb(va_arg(args, long long int), format);
+		print_length += ft_base_numb(va_arg(args, unsigned int), format);
 	else if (format == '%')
 		print_length += ft_percent();
 	return (print_length);

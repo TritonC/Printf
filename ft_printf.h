@@ -21,8 +21,8 @@
 int		ft_putnbr_base(long long int nbr, char *base);
 int		ft_putstr(char *str);
 void	ft_putnbr(int num);
-int		ft_ptr(void *p);
-int		ft_unsigned_numb(unsigned long int nb);
+int		ft_ptr(unsigned long long n);
+int		ft_unsigned_numb(unsigned int nb);
 int		ft_base_numb(long long int n, const char format);
 int		ft_printf(const char *str, ...);
 
