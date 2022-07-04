@@ -6,7 +6,7 @@
 /*   By: mluis-fu <mluis-fu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 14:20:25 by mluis-fu          #+#    #+#             */
-/*   Updated: 2022/07/04 17:15:30 by mluis-fu         ###   ########.fr       */
+/*   Updated: 2022/07/04 17:34:13 by mluis-fu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_putstr(char *str)
 int	ft_ptr(void *p)
 {
 	unsigned long int	ptr_value;
-	int				count;
+	int					count;
 
 	count = 0;
 	ptr_value = (unsigned long int)p;
