@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mluis-fu <mluis-fu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/01 15:55:16 by marvin            #+#    #+#             */
-/*   Updated: 2022/07/01 15:55:16 by marvin           ###   ########.fr       */
+/*   Created: 2022/06/30 14:29:01 by mluis-fu          #+#    #+#             */
+/*   Updated: 2022/07/04 16:47:15 by mluis-fu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include <unistd.h>
+#include <stdio.h>
 
 void	ft_putchar(char c)
 {
@@ -41,28 +42,38 @@ int	check_base(char *base)
 	return (b);
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+int	ft_putnbr_base(long long int nbr, char *base)
 {
-	long int	num;
-	int			size;
-	int			count;
+	int					size;
+	int					i;
+
+	i = 0;
+	size = check_base(base);
+	if (nbr < 0)
+	{
+		ft_putchar(45);
+		nbr *= -1;
+		i++;
+	}
+	if (nbr >= (long long int)size)
+	{
+		i = ft_putnbr_base(nbr / size, base);
+	}
+	ft_putchar(base[nbr % size]);
+	i++;
+	return (i);
+}
+
+int	ft_base_numb(long long int n, const char format)
+{
+	int	count;
 
 	count = 0;
-	num = nbr;
-	size = check_base(base);
-	if (size > 1)
-	{
-		if (num < 0)
-		{
-			ft_putchar(45);
-			num *= -1;
-		}
-		if (num >= size)
-		{
-			ft_putnbr_base(num / size, base);
-			ft_putchar(base[num % size]);
-		}
-		else
-			ft_putchar(base[num % size]);
-	}
+	if (format == 'd' || format == 'i')
+		count = ft_putnbr_base(n, "0123456789");
+	else if (format == 'x')
+		count = ft_putnbr_base(n, "0123456789abcdef");
+	else if (format == 'X')
+		count = ft_putnbr_base(n, "0123456789ABCDEF");
+	return (count);
 }

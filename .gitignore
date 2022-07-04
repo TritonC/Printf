@@ -1,0 +1,7 @@
+.vscode
+a.out.DSYM
+printfTester
+a.out
+README.MD
+printf.h.gch
+.DS_Store

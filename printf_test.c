@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_ptr.c                                        :+:      :+:    :+:   */
+/*   printf_test.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mluis-fu <mluis-fu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/01 16:14:57 by marvin            #+#    #+#             */
-/*   Updated: 2022/07/01 16:14:57 by marvin           ###   ########.fr       */
+/*   Created: 2022/07/04 13:01:58 by mluis-fu          #+#    #+#             */
+/*   Updated: 2022/07/04 17:01:02 by mluis-fu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void    print_ptr(void *p)
+int	main(void)
 {
-	size_t ptr_value;
+	int		test;
+	void	*p;
+	int		save_value;
 
-	ptr_value = (size_t) p;
-	write (1, "0x", 2);
-	ft_putnbr_base (ptr_value, "0123456789abcdef");
+	test = -123451237;
+	printf("%x\n", test);
+	printf("%zu\n", (size_t)p);
+	printf("test punter: %p\n", p);
+	save_value = ft_ptr(p);
+	printf("\n%i\n", save_value);
+	ft_printf("%d\n\n", test);
 }
