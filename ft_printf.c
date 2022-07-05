@@ -3,26 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mluis-fu <mluis-fu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manuel <manuel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 23:05:51 by marvin            #+#    #+#             */
-/*   Updated: 2022/07/05 12:20:55 by mluis-fu         ###   ########.fr       */
+/*   Updated: 2022/07/05 13:33:24 by manuel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int	ft_percent(void)
-{
-	write(1, "%", 1);
-	return (1);
-}
-
-int	ft_char(int c)
-{
-	write(1, &c, 1);
-	return (1);
-}
 
 int	ft_toprint(va_list args, const char format)
 {

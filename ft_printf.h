@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mluis-fu <mluis-fu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manuel <manuel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 14:27:25 by mluis-fu          #+#    #+#             */
-/*   Updated: 2022/07/05 12:41:08 by mluis-fu         ###   ########.fr       */
+/*   Updated: 2022/07/05 13:38:20 by manuel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#define FT_PRINTF_H
 
 # include <limits.h>
 # include <unistd.h>
@@ -27,5 +27,7 @@ int		ft_base_numb(long long int n, const char format);
 int		ft_printf(const char *str, ...);
 int		num_len(int nb);
 void	ft_putchar(char c);
+int     ft_percent(void);
+int     ft_char(char c);
 
 #endif

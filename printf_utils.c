@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   printf_utils.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mluis-fu <mluis-fu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manuel <manuel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 14:20:25 by mluis-fu          #+#    #+#             */
-/*   Updated: 2022/07/05 12:45:34 by mluis-fu         ###   ########.fr       */
+/*   Updated: 2022/07/05 13:33:30 by manuel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,23 +57,6 @@ int	ft_unsigned_numb(unsigned int nb)
 		nb_len++;
 	}
 	return (nb_len);
-}
-
-int	num_len(int nb)
-{
-	int	count;
-
-	count = 0;
-	if (nb == 0)
-		return (1);
-	if (nb < 0)
-		count++;
-	while (nb != 0)
-	{
-		nb /= 10;
-		count++;
-	}
-	return (count);
 }
 
 int	ft_putnbr(int nb)
