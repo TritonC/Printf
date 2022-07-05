@@ -6,7 +6,7 @@
 /*   By: mluis-fu <mluis-fu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 23:05:51 by marvin            #+#    #+#             */
-/*   Updated: 2022/07/04 17:33:08 by mluis-fu         ###   ########.fr       */
+/*   Updated: 2022/07/05 12:20:55 by mluis-fu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_toprint(va_list args, const char format)
 	else if (format == 'p')
 		print_length += ft_ptr(va_arg(args, unsigned long long));
 	else if (format == 'd' || format == 'i')
-		print_length += ft_base_numb(va_arg(args, int), format);
+		print_length += ft_putnbr(va_arg(args, int));
 	else if (format == 'u')
 		print_length += ft_unsigned_numb(va_arg(args, unsigned int));
 	else if (format == 'x' || format == 'X')
