@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   printf_utils.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: manuel <manuel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mluis-fu <mluis-fu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 14:20:25 by mluis-fu          #+#    #+#             */
-/*   Updated: 2022/07/05 13:33:30 by manuel           ###   ########.fr       */
+/*   Updated: 2022/07/07 16:48:05 by mluis-fu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_ptr(unsigned long long nb)
 
 	count = 0;
 	write (1, "0x", 2);
-	count = ft_putnbr_base(nb, "0123456789abcdef");
+	count = ft_putnbr_base(nb, "0123456789abcdef", 16);
 	return (count + 2);
 }
 
@@ -50,7 +50,7 @@ int	ft_unsigned_numb(unsigned int nb)
 		write (1, "0", 1);
 		return (1);
 	}
-	ft_putnbr_base(nb, "0123456789");
+	ft_putnbr_base(nb, "0123456789", 10);
 	while (nb != 0)
 	{
 		nb /= 10;
