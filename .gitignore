@@ -5,3 +5,5 @@ a.out
 README.MD
 printf.h.gch
 .DS_Store
+ft_printf_tester
+.gitignore
