@@ -15,13 +15,13 @@ OBJECTS = $(FUNCTIONS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	ar -rc $(NAME) $(OBJECTS)
+	@ar -rc $(NAME) $(OBJECTS)
 
 clean:
-	rm -f $(OBJECTS) $(OBJECTS_BONUS)
+	@rm -f $(OBJECTS)
 
 fclean: clean
-	rm -f $(NAME) $(OBJECTS_BONUS)
+	@rm -f $(NAME)
 
 re: fclean all
 

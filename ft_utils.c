@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: manuel <manuel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mluis-fu <mluis-fu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 13:29:05 by manuel            #+#    #+#             */
-/*   Updated: 2022/07/05 13:33:50 by manuel           ###   ########.fr       */
+/*   Updated: 2022/07/07 11:26:24 by mluis-fu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
 
 int	num_len(int nb)
 {
@@ -27,13 +29,13 @@ int	num_len(int nb)
 	return (count);
 }
 
-int ft_percent(void)
+int	ft_percent(void)
 {
 	write(1, "%", 1);
 	return (1);
 }
 
-int ft_char(char c)
+int	ft_char(char c)
 {
 	write(1, &c, 1);
 	return (1);
@@ -43,4 +45,3 @@ void	ft_putchar(char c)
 {
 	write (1, &c, 1);
 }
-
